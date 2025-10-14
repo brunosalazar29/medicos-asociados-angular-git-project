@@ -1,0 +1,95 @@
+.registro-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f4f6f8;
+}
+
+.registro-card {
+  width: 600px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: block;           /* hace que se pueda centrar con margin auto */
+  margin: 0 auto 20px;      /* centrado horizontal + espacio abajo */
+  width: 120px;             /* tamaño pequeño */
+  height: auto;             /* mantiene proporción */
+}
+
+h2 {
+  text-align: center;
+  color: #009973;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.info {
+  font-size: 12px;
+  color: #ff6600;
+}
+
+.checks,
+.captcha {
+  margin: 15px 0;
+  font-size: 13px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #009973;
+  color: white;
+}
+
+button[type="button"] {
+  background-color: #ccc;
+}

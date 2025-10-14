@@ -1,0 +1,101 @@
+<div class="registro-container">
+  <div class="registro-card">
+    <h2>Personal de Salud Afiliado</h2>
+  <img src="img/logo.jpg" alt="Logo" class="logo" />
+    <p class="subtext">
+      Ingresa tus datos personales para acceder a tu zona privada. Recuerda que con este registro podrás ingresar tu solicitud en SANNA.
+    </p>
+
+    <form #registroForm="ngForm" (ngSubmit)="registrar()">
+      <!-- CORREO -->
+      <div class="form-group">
+        <label>Ingrese su Correo</label>
+        <input type="email" name="correo" [(ngModel)]="registro.correo" required />
+      </div>
+
+      <div class="form-group">
+        <label>Confirmar su Correo</label>
+        <input type="email" name="confirmCorreo" [(ngModel)]="registro.confirmCorreo" required />
+      </div>
+
+      <!-- CONTRASEÑA -->
+      <div class="form-group">
+        <label>Ingrese su Contraseña</label>
+        <input type="password" name="password" [(ngModel)]="registro.password" required />
+      </div>
+
+      <div class="form-group">
+        <label>Confirmar su Contraseña</label>
+        <input type="password" name="confirmPassword" [(ngModel)]="registro.confirmPassword" required />
+        <small class="info">
+          La contraseña debe tener al menos un número, una letra minúscula, una letra mayúscula y un carácter especial sin espacios.
+        </small>
+      </div>
+
+      <h3>Datos personales</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Ingrese sus Nombres</label>
+          <input type="text" name="nombres" [(ngModel)]="registro.nombres" required />
+        </div>
+
+        <div class="form-group">
+          <label>Ingrese sus Apellidos</label>
+          <input type="text" name="apellidos" [(ngModel)]="registro.apellidos" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Ingrese su Teléfono 1</label>
+          <input type="tel" name="telefono1" [(ngModel)]="registro.telefono1" required />
+        </div>
+
+        <div class="form-group">
+          <label>Ingrese su Teléfono 2</label>
+          <input type="tel" name="telefono2" [(ngModel)]="registro.telefono2" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Ingrese Tipo Documento</label>
+          <select name="tipoDoc" [(ngModel)]="registro.tipoDoc" required>
+            <option value="DNI">DNI</option>
+            <option value="CE">Carnet de Extranjería</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Ingrese su Nro Documento</label>
+          <input type="text" name="nroDoc" [(ngModel)]="registro.nroDoc" required />
+        </div>
+      </div>
+
+      <!-- CHECKS -->
+      <div class="checks">
+        <label>
+          <input type="checkbox" name="terminos" [(ngModel)]="registro.terminos" required />
+          He leído y acepto los <a href="#">términos y condiciones</a> y la <a href="#">cláusula informativa</a>
+        </label>
+        <label>
+          <input type="checkbox" name="cookies" [(ngModel)]="registro.cookies" required />
+          He leído y acepto la <a href="#">Política de cookies</a>
+        </label>
+      </div>
+
+      <!-- CAPTCHA FICTICIO -->
+      <div class="captcha">
+        <label><input type="checkbox" required /> No soy un robot 🤖</label>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" [disabled]="!registroForm.valid">Registrar</button>
+        <button type="button" class="button btn-cancel" (click)="volverAlLogin()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

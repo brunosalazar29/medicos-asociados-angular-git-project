@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="header">
+    Acceso Médicos Asociados
+    <div class="logo">SANNA</div>
+  </div>
+
+  <form class="form">
+    <label>Usuario</label>
+    <input type="text" placeholder="Usuario" />
+
+    <label>Contraseña</label>
+    <input type="password" placeholder="Contraseña" />
+
+    <label>Código de Autenticación</label>
+    <input type="text" value="999999" />
+
+    <div class="captcha">
+      <div class="captcha-icon">↻</div>
+      <div class="captcha-checkbox">
+        <input type="checkbox" /> No soy un robot
+      </div>
+      <div class="captcha-logo">reCAPTCHA</div>
+    </div>
+
+    <div class="captcha-links">Privacidad - Condiciones</div>
+
+    <button type="button" class="button btn-login">Iniciar</button>
+    <button
+      type="button"
+      class="button btn-register"
+      (click)="goToRegistro()"
+    >
+      Registrate
+    </button>
+    <button type="button" class="button btn-recover">Recuperar credenciales</button>
+  </form>
+</div>
