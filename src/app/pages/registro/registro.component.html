@@ -1,101 +1,100 @@
-<div class="registro-container">
-  <div class="registro-card">
-    <h2>Personal de Salud Afiliado</h2>
-  <img src="img/logo.jpg" alt="Logo" class="logo" />
-    <p class="subtext">
-      Ingresa tus datos personales para acceder a tu zona privada. Recuerda que con este registro podrás ingresar tu solicitud en SANNA.
-    </p>
 
-    <form #registroForm="ngForm" (ngSubmit)="registrar()">
-      <!-- CORREO -->
-      <div class="form-group">
-        <label>Ingrese su Correo</label>
-        <input type="email" name="correo" [(ngModel)]="registro.correo" required />
-      </div>
+<body>
 
-      <div class="form-group">
-        <label>Confirmar su Correo</label>
-        <input type="email" name="confirmCorreo" [(ngModel)]="registro.confirmCorreo" required />
-      </div>
+    <div class="container">
+        <header class="header">
+            <h1>Personal de Salud Afiliado</h1>
+      <img src="img/logo.jpg" alt="Logo" class="logo" />
+        </header>
 
-      <!-- CONTRASEÑA -->
-      <div class="form-group">
-        <label>Ingrese su Contraseña</label>
-        <input type="password" name="password" [(ngModel)]="registro.password" required />
-      </div>
+        <div class="form-body">
+            <p class="form-intro">Ingresa tus datos personales para acceder a tu zona privada. Recuerda que con este registro podrás ingresar tu solicitud en SANNA.</p>
+            
+            <form id="registrationForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="email">Ingrese su Correo</label>
+                        <input type="email" id="email" name="email" placeholder="Correo" required>
+                    </div>
 
-      <div class="form-group">
-        <label>Confirmar su Contraseña</label>
-        <input type="password" name="confirmPassword" [(ngModel)]="registro.confirmPassword" required />
-        <small class="info">
-          La contraseña debe tener al menos un número, una letra minúscula, una letra mayúscula y un carácter especial sin espacios.
-        </small>
-      </div>
+                    <div class="form-group">
+                        <label for="email-confirm">Confirmar su Correo</label>
+                        <input type="email" id="email-confirm" name="email-confirm" placeholder="Correo" required>
+                    </div>
 
-      <h3>Datos personales</h3>
+                    <div class="form-group">
+                        <label for="password">Ingrese su Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label>Ingrese sus Nombres</label>
-          <input type="text" name="nombres" [(ngModel)]="registro.nombres" required />
+                    <div class="form-group">
+                        <label for="password-confirm">Confirmar su Contraseña</label>
+                        <input type="password" id="password-confirm" name="password-confirm" placeholder="Contraseña" required>
+                    </div>
+                    
+                </div>
+
+                
+                <p class="password-note">LA CONTRASEÑA DEBE TENER COMO MÍNIMO UN NÚMERO, UNA LETRA MINÚSCULA, UNA LETRA MAYÚSCULA Y UN CARACTER ESPECIAL SIN ESPACIOS EN BLANCO.</p>
+
+
+                <h2 class="section-title">Datos personales</h2>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombres">Ingrese sus Nombres</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Nombres" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apellidos">Ingrese sus Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono1">Ingrese su Teléfono 1</label>
+                        <input type="tel" id="telefono1" name="telefono1" placeholder="Teléfono 1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono2">Ingrese su Teléfono 2</label>
+                        <input type="tel" id="telefono2" name="telefono2" placeholder="Teléfono 2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo-documento">Ingrese Tipo Documento</label>
+                        <select id="tipo-documento" name="tipo-documento" required>
+                            <option value="">Seleccione...</option>
+                            <option value="DNI">DNI</option>
+                            <option value="CE">Carné de Extranjería</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nro-documento">Ingrese su Nro Documento</label>
+                        <input type="text" id="nro-documento" name="nro-documento" placeholder="Nro Documento" required>
+                    </div>
+
+                    <div class="checkbox-group full-width">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">He leído y acepto los <a href="#">términos y condiciones</a> y la <a href="#">cláusula informativa</a> para el tratamiento de sus datos personales.</label>
+                    </div>
+
+                    <div class="checkbox-group full-width">
+                        <input type="checkbox" id="cookies" name="cookies">
+                        <label for="cookies">He leído y acepto la <a href="#">Política de cookies</a>.</label>
+                    </div>
+                
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary" >Registrar</button>
+                     <button type="button" class="btn btn-secondary" (click)="volverAlLogin()">Cancelar</button>
+
+                    </div>
+                </div>
+            </form>
         </div>
+    </div>
 
-        <div class="form-group">
-          <label>Ingrese sus Apellidos</label>
-          <input type="text" name="apellidos" [(ngModel)]="registro.apellidos" required />
-        </div>
-      </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label>Ingrese su Teléfono 1</label>
-          <input type="tel" name="telefono1" [(ngModel)]="registro.telefono1" required />
-        </div>
-
-        <div class="form-group">
-          <label>Ingrese su Teléfono 2</label>
-          <input type="tel" name="telefono2" [(ngModel)]="registro.telefono2" />
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Ingrese Tipo Documento</label>
-          <select name="tipoDoc" [(ngModel)]="registro.tipoDoc" required>
-            <option value="DNI">DNI</option>
-            <option value="CE">Carnet de Extranjería</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Ingrese su Nro Documento</label>
-          <input type="text" name="nroDoc" [(ngModel)]="registro.nroDoc" required />
-        </div>
-      </div>
-
-      <!-- CHECKS -->
-      <div class="checks">
-        <label>
-          <input type="checkbox" name="terminos" [(ngModel)]="registro.terminos" required />
-          He leído y acepto los <a href="#">términos y condiciones</a> y la <a href="#">cláusula informativa</a>
-        </label>
-        <label>
-          <input type="checkbox" name="cookies" [(ngModel)]="registro.cookies" required />
-          He leído y acepto la <a href="#">Política de cookies</a>
-        </label>
-      </div>
-
-      <!-- CAPTCHA FICTICIO -->
-      <div class="captcha">
-        <label><input type="checkbox" required /> No soy un robot 🤖</label>
-      </div>
-
-      <div class="buttons">
-        <button type="submit" [disabled]="!registroForm.valid">Registrar</button>
-        <button type="button" class="button btn-cancel" (click)="volverAlLogin()">
-          Cancelar
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
+</body>
