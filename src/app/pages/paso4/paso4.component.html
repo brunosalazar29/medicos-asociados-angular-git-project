@@ -1,0 +1,92 @@
+<app-header></app-header>
+
+<div class="page-container">
+  <div class="registro-container">
+    <div class="titulo-franja">
+      <h2 class="titulo-principal">Inscripción Personal Médico</h2>
+    </div>
+
+    <div class="contenido">
+      <h1>Bienvenido(a) a SANNA División Ambulatoria</h1>
+      <p class="subtitle">
+        Conócenos y descubre en qué consiste cada uno de nuestros servicios:
+        <button class="btn-ver">VER</button>
+      </p>
+
+      <!-- Paso 3 -->
+      <div class="step-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 67%"></div>
+        </div>
+
+        <div class="step-header">
+          <h2>Paso 3: Documentación</h2>
+          <div class="numero-solicitud">Nro Solicitud: <strong>36325</strong></div>
+        </div>
+
+        <p class="step-subtitle">
+          Te estás suscribiendo al servicio de: <strong>Médicos a Domicilio</strong>
+        </p>
+        <p class="step-subtitle">
+          Como parte del proceso de suscripción al servicio, necesitamos la siguiente información:
+        </p>
+
+        <!-- 📄 Tabla de documentos -->
+        <div class="tabla-documentos">
+          <div class="fila encabezado">
+            <div>Documento / Prueba</div>
+            <div>Enlace / Descarga</div>
+            <div>Archivo</div>
+            <div>Intentos</div>
+          </div>
+
+          <div class="fila">
+            <div>Certificado único laboral</div>
+            <div><a href="#">ENLACE</a></div>
+            <div class="input-file">
+              <input type="text" value="27341_1ra_cv.pdf" readonly />
+              <button type="button" class="btn-browse">Browse</button>
+              <button type="button" class="btn-eliminar">🗑️</button>
+            </div>
+            <div>0 / 1</div>
+          </div>
+
+          <div class="fila">
+            <div>Prueba Eysenck (*)</div>
+            <div><a href="#">DESCARGA</a></div>
+            <div class="input-file">
+              <input type="text" value="27341_1ra_cv.pdf" readonly />
+              <button type="button" class="btn-browse">Browse</button>
+              <button type="button" class="btn-eliminar">🗑️</button>
+            </div>
+            <div>0 / 1</div>
+          </div>
+
+          <div class="fila">
+            <div>Prueba DISC</div>
+            <div><a href="#">DESCARGA</a></div>
+            <div class="input-file">
+              <input type="text" value="27341_1ra_cv.pdf" readonly />
+              <button type="button" class="btn-browse">Browse</button>
+              <button type="button" class="btn-eliminar">🗑️</button>
+            </div>
+            <div>0 / 1</div>
+          </div>
+        </div>
+
+        <p class="nota advertencia">
+          Recuerda que tienes un tiempo destinado para cada prueba.
+        </p>
+
+        <p class="nota advertencia">
+          Si ha realizado una carga parcial de documento, cuenta con 72 horas para terminar la
+          regularización, caso contrario, su proceso de solicitud de inscripción será desestimado.
+        </p>
+
+        <div class="form-actions">
+        <button type="submit" class="btn-continuar" (click)="goToPaso5()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

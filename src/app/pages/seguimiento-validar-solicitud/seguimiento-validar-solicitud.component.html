@@ -1,0 +1,117 @@
+<div class="modal-validar">
+  <div class="modal-header">
+    <h3><i class="fa fa-plus-circle"></i> Validar Solicitud</h3>
+<button class="btn-cerrar" (click)="cerrarPopup()">×</button>
+  </div>
+
+  <div class="modal-body">
+    <!-- Pestañas -->
+    <div class="tabs">
+      <button class="tab active">Datos personales</button>
+      <button class="tab">Datos adicionales</button>
+    </div>
+
+    <!-- Contenido de pestaña -->
+    <div class="contenido-tab">
+      <div class="form-grid">
+        <div>
+          <label>Unidad</label>
+          <input type="text" value="Médicos a Domicilio" readonly />
+        </div>
+        <div>
+          <label>Nro Solicitud</label>
+          <input type="text" value="68103" readonly />
+        </div>
+        <div>
+          <label>Fecha Solicitud</label>
+          <input type="text" value="2025-10-24" readonly />
+        </div>
+        <div>
+          <label>Hora Solicitud</label>
+          <input type="text" value="18:41:20" readonly />
+        </div>
+        <div>
+          <label>Estado</label>
+          <input type="text" value="Completado 1ra Fase" readonly />
+        </div>
+        <div>
+          <label>Nombres</label>
+          <input type="text" value="Virginia Magda" readonly />
+        </div>
+        <div>
+          <label>Apellidos</label>
+          <input type="text" value="Churapa Quispe" readonly />
+        </div>
+        <div>
+          <label>Tipo doc. ident</label>
+          <input type="text" value="DNI" readonly />
+        </div>
+        <div>
+          <label>Nro. documento</label>
+          <input type="text" value="45817337" readonly />
+        </div>
+        <div>
+          <label>Nro. colegiatura</label>
+          <input type="text" value="098747" readonly />
+        </div>
+        <div>
+          <label>Nro. RNE</label>
+          <input type="text" value="-" readonly />
+        </div>
+        <div>
+          <label>Especialidad</label>
+          <input type="text" value="otra" readonly />
+        </div>
+        <div>
+          <label>Profesión</label>
+          <input type="text" value="MEDICO" readonly />
+        </div>
+      </div>
+
+      <!-- Sección inferior (solo estructura visual) -->
+      <div class="tabs-internas">
+        <button class="sub-tab active">1ra Documentación</button>
+        <button class="sub-tab">Pruebas Psicotécnicas</button>
+        <button class="sub-tab">2da Documentación</button>
+      </div>
+
+      <div class="bloque-documentos">
+        <p>📄 Contenido de documentación (por ahora vacío)</p>
+      </div>
+
+      <!-- Radios y comentarios -->
+      <div class="seccion-evaluacion">
+        <div class="grupo-radio">
+          <label>¿Debida diligencia?</label>
+          <div>
+            <label><input type="radio" name="diligencia" /> Sí</label>
+            <label><input type="radio" name="diligencia" /> No</label>
+          </div>
+        </div>
+
+        <div class="grupo-radio">
+          <label>¿Aprobado por Jefatura?</label>
+          <div>
+            <label><input type="radio" name="jefatura" /> Sí</label>
+            <label><input type="radio" name="jefatura" /> No</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="comentarios">
+        <label>Comentarios para el médico:</label>
+        <textarea rows="3"></textarea>
+      </div>
+
+      <div class="acciones">
+        <button class="btn aceptar" disabled>Aceptar</button>
+        <button class="btn rechazar">Rechazar</button>
+      </div>
+
+      <div class="comentario-final">
+        <label>Comentarios de la solicitud:</label>
+        <textarea rows="2" readonly></textarea>
+      </div>
+    </div>
+  </div>
+</div>

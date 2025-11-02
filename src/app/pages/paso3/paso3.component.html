@@ -1,0 +1,114 @@
+<app-header></app-header>
+
+<div class="page-container">
+  <!-- Contenedor principal -->
+  <div class="registro-container">
+    <!-- Franja verde con título -->
+    <div class="titulo-franja">
+      <h2 class="titulo-principal">Inscripción Personal Médico</h2>
+    </div>
+
+    <div class="contenido">
+      <h1>Bienvenido(a) a SANNA División Ambulatoria</h1>
+      <p class="subtitle">
+        Conócenos y descubre en qué consiste cada uno de nuestros servicios:
+        <button class="btn-ver">VER</button>
+      </p>
+
+      <!-- Paso 2 -->
+      <div class="step-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 50%"></div>
+        </div>
+
+        <div class="step-header">
+          <h2>Paso 3: Documentación</h2>
+          <div class="numero-solicitud">Nro Solicitud: <strong>36325</strong></div>
+        </div>
+
+        <p class="step-subtitle">
+          Te estás suscribiendo al servicio de: <strong>Médicos a Domicilio</strong>
+        </p>
+        <p class="step-subtitle">
+          Como parte del proceso de suscripción al servicio, necesitamos la siguiente información:
+        </p>
+
+        <!-- 📂 Grid de documentos -->
+        <form>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Currículum vitae simple actualizado</label>
+              <div class="input-file">
+                <input type="file" id="cv" />
+                <button type="button" class="btn-eliminar">🗑️</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Copia del RNE otorgado por el CMP (*)</label>
+              <div class="input-file">
+                <input type="file" id="rne" />
+                <button type="button" class="btn-eliminar">🗑️</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Copia del Título Profesional</label>
+              <div class="input-file">
+                <input type="file" id="titulo" />
+                <button type="button" class="btn-eliminar">🗑️</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Declaración jurada de no tener antecedentes penales o judiciales</label>
+              <div class="input-file">
+                <input type="file" id="declaracion" />
+                <button type="button" class="btn-eliminar">🗑️</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Copia de colegiatura otorgada por el CMP (*)</label>
+              <div class="input-file">
+                <input type="file" id="colegiatura" />
+                <button type="button" class="btn-eliminar">🗑️</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Copia del título de especialidad (*)</label>
+              <div class="input-file">
+                <input type="file" id="especialidad" />
+                <button type="button" class="btn-eliminar">🗑️</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="nota">
+            (*) Si no cuenta, adjuntar evidencia del trámite. Si cuenta, adjuntar constancias de culminación.
+          </p>
+
+          <div class="form-group comentarios">
+            <label>Comentarios:</label>
+            <textarea rows="3"></textarea>
+          </div>
+
+          <div class="nota advertencia">
+            <strong>Si ha realizado una carga parcial de documentos</strong>, cuenta con 72 horas para
+            terminar la regularización, caso contrario, su proceso será desestimado.
+          </div>
+
+          <div class="nota final">
+            Si todos tus documentos se encuentran conformes, te informaremos para continuar con las pruebas psicotécnicas.
+          </div>
+
+        <div class="form-actions">
+        <button type="submit" class="btn-continuar" (click)="goToPaso4()">Guardar</button>
+        </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

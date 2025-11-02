@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<div class="page-container">
+  <div class="solicitudes-container">
+    <div class="titulo-franja">
+      <h2 class="titulo-principal">SOLICITUDES</h2>
+    </div>
+
+    <div class="contenido">
+      <!-- 🔹 Filtros -->
+      <div class="filtros">
+        <div class="campo">
+          <label>Unidad de negocio:</label>
+          <select>
+            <option>Médicos a Domicilio</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label>Fecha Inicio</label>
+          <input type="date" value="2025-10-17" />
+        </div>
+
+        <div class="campo">
+          <label>Fecha Fin</label>
+          <input type="date" value="2025-10-17" />
+        </div>
+
+        <div class="campo">
+          <label>Estado</label>
+          <select>
+            <option>Nueva solicitud</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 🔹 Botones -->
+      <div class="acciones">
+        <button class="btn buscar"><i class="icon">🔍</i> Buscar</button>
+        <button class="btn exportar"><i class="icon">📄</i> Exportar</button>
+        <button class="btn validar" (click)="abrirPopup()"><i class="icon" >👁️</i> Validar Solicitud</button>
+      </div>
+
+      <!-- 🔹 Tabla -->
+      <div class="tabla-solicitudes">
+        <table>
+          <thead>
+            <tr>
+              <th>Nro Solicitud</th>
+              <th>Fecha Solicitud</th>
+              <th>Hora Solicitud</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Nro Colegiatura</th>
+              <th>Especialidad</th>
+              <th>Situación</th>
+              <th>Unidad</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="10" class="sin-datos">No hay datos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

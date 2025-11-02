@@ -1,0 +1,142 @@
+<app-header></app-header>
+
+<div class="page-container">
+  <div class="registro-container">
+    <div class="titulo-franja">
+      <h2 class="titulo-principal">Inscripción Personal Médico</h2>
+    </div>
+
+    <div class="contenido">
+      <h1>Bienvenido(a) a SANNA División Ambulatoria</h1>
+      <p class="subtitle">
+        Conócenos y descubre en qué consiste cada uno de nuestros servicios:
+        <button class="btn-ver">VER</button>
+      </p>
+
+      <!-- Paso 4 -->
+      <div class="step-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 83%"></div>
+        </div>
+
+        <div class="step-header">
+          <h2>Paso 4: 2da. Documentación</h2>
+          <div class="numero-solicitud">Nro Solicitud: <strong>61047</strong></div>
+        </div>
+
+        <p class="step-subtitle">
+          Te estás suscribiendo al servicio de :
+          <strong>Ambulancias</strong>
+        </p>
+
+        <p class="step-subtitle">
+          Como parte del proceso de suscripción al servicio, necesitamos la siguiente información:
+        </p>
+
+        <!-- 🧩 GRID DE CAMPOS -->
+        <div class="grid-form">
+          <!-- Columna 1 -->
+          <div class="col">
+            <label>Copia del Resolución de SUNEDU de médico cirujano (extranjero)</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+
+            <label>Copia DNI, CE, PTP, CPP o Pasaporte (ambas caras):</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+
+            <label>Constancia de vacunación:</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+
+            <label>Constancia de Habilidad profesional vigente:</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+          </div>
+
+          <!-- Columna 2 -->
+          <div class="col">
+            <label>Copia del Resolución de SUNEDU de especialidad (extranjero)</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+
+            <label>Firma escaneada:</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+
+            <label>Foto tamaño carnet (*):</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+
+            <label>Fecha de vigencia:</label>
+            <input type="date" />
+          </div>
+
+          <!-- Columna 3 -->
+          <div class="col">
+            <label>Nro de cuenta o código interbancario:</label>
+            <input type="text" />
+
+            <label>Nombre del banco:</label>
+            <select>
+              <option>Seleccione una opción</option>
+              <option>BCP</option>
+              <option>Interbank</option>
+              <option>BBVA</option>
+            </select>
+
+            <label>Tipo de cuenta:</label>
+            <select>
+              <option>Seleccione una opción</option>
+              <option>Ahorros</option>
+              <option>Corriente</option>
+            </select>
+
+            <label>Constancia de apertura de cuenta de banco (extranjeros):</label>
+            <div class="input-file">
+              <input type="text" readonly />
+              <button class="btn-browse">Browse</button>
+            </div>
+
+            <label>Nro de RUC:</label>
+            <input type="text" />
+
+            <div class="check-row">
+              <input type="checkbox" id="factura" />
+              <label for="factura">Emitir factura</label>
+            </div>
+
+            <label>Nro cuenta Detracción:</label>
+            <input type="text" />
+          </div>
+        </div>
+
+        <label>Comentarios:</label>
+        <textarea rows="3"></textarea>
+
+        <p class="nota advertencia">
+          Si ha realizado una carga parcial de documento, cuenta con 72 horas para terminar la
+          regularización, caso contrario, su proceso de solicitud de inscripción será desestimado.
+        </p>
+
+        <div class="form-actions">
+          <button class="btn-continuar">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+/* 🔹 Header superior blanco */
+.main-header {
+  width: 100%;
+  background-color: white;
+  color: #333;
+  padding: 12px 0; /* quitar padding lateral extra */
+  border-bottom: 1px solid #a19f9f;
+  position: fixed; /* se mantiene arriba */
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* evita desbordes */
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px; /* evita que se extienda de más */
+  margin: 0 auto; /* centra contenido */
+  padding: 0 20px; /* espaciado interno moderado */
+  box-sizing: border-box;
+}
+
+
+.header-logo {
+  width: 120px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 4px;
+  margin-left: 10px; /* lo acerca un poco al borde izquierdo */
+}
+
+.btn-logout {
+  background-color: #1cc88a;
+  color: white;
+  border: none;
+  padding: 14px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 30px; /* separa del borde derecho */
+  margin-left: auto; /* empuja el botón al extremo derecho */
+}
+
+.btn-logout:hover {
+  background-color: #17a673;
+}
+
+/* 🔹 Para evitar scroll horizontal global */
+:host {
+  display: block;
+  overflow-x: hidden;
+}

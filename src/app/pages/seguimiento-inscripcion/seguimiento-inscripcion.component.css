@@ -1,0 +1,151 @@
+.page-container {
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.solicitudes-container {
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 1500px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.titulo-franja {
+  background-color: #1cc88a;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px 20px 0 0;
+}
+
+.titulo-principal {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contenido {
+  padding: 30px 50px;
+}
+
+/* 🔹 Filtros */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.campo select,
+.campo input[type="date"] {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  width: 230px;
+}
+
+/* 🔹 Botones */
+.acciones {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn.buscar {
+  background-color: #1cc88a;
+  color: white;
+}
+
+.btn.exportar {
+  background-color: #1cc88a;
+  color: white;
+}
+
+.btn.validar {
+  background-color: #1cc88a;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #17a673;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+/* 🔹 Tabla */
+.tabla-solicitudes table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-solicitudes th {
+  background-color: #1cc88a;
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.tabla-solicitudes td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+  color: #333;
+}
+
+.sin-datos {
+  text-align: center;
+  color: #555;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .filtros {
+    flex-direction: column;
+  }
+
+  .acciones {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .campo select,
+  .campo input[type="date"] {
+    width: 100%;
+  }
+}

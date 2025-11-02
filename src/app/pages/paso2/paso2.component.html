@@ -1,0 +1,107 @@
+  <app-header></app-header>
+
+<div class="page-container">
+  <div class="registro-container">
+    <div class="titulo-franja">
+      <h2 class="titulo-principal">Inscripción Personal Médico</h2>
+    </div>
+
+    <div class="contenido">
+      <h1>Bienvenido(a) a SANNA División Ambulatoria</h1>
+      <p class="subtitle">
+        Conócenos y descubre en qué consiste cada uno de nuestros servicios:
+        <button class="btn-ver">VER</button>
+      </p>
+
+      <div class="step-container">
+        <div class="progress-bar">
+          <div class="progress" style="width: 33%"></div>
+        </div>
+
+        <div class="step-header">
+          <h2>Paso 2: Selección del servicio</h2>
+          <div class="numero-solicitud">Nro Solicitud: <strong></strong></div>
+        </div>
+
+        <p class="step-subtitle">
+          Te estás suscribiendo al servicio de: <strong></strong>
+        </p>
+        <p class="step-subtitle">
+          Como parte del proceso de suscripción al servicio, necesitamos la siguiente información:
+        </p>
+
+        <form>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Número de colegiatura</label>
+              <input type="text" value="46556" />
+            </div>
+
+            <div class="form-group">
+              <label>Especialidad</label>
+              <select>
+                <option value="Cirugía">Cirugía</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Número RNE</label>
+              <input type="text" value="46556" />
+            </div>
+
+            <div class="form-group">
+              <label>Otros</label>
+              <input type="text" value="Otra especialidad" />
+            </div>
+
+            <div class="form-group">
+              <label>Conocimiento idiomas</label>
+              <select>
+                <option value="Inglés">Inglés</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Fecha de nacimiento</label>
+              <input type="date" value="2005-09-01" />
+            </div>
+
+            <div class="form-group">
+              <label>Nacionalidad</label>
+              <input type="text" value="Perú" />
+            </div>
+
+            <div class="form-group">
+              <label>Departamento / Provincia / Distrito</label>
+              <input type="text" value="AMAZONAS / BAGUA / ARAMANGO" />
+            </div>
+
+            <div class="form-group">
+              <label>Dirección</label>
+              <input type="text" value="sadsdsa" />
+            </div>
+
+            <div class="form-group">
+              <label>Referencia</label>
+              <input type="text" value="sadsdsa" />
+            </div>
+
+            <div class="form-group">
+              <label>Factor de riesgo</label>
+              <div>
+                <input type="radio" name="riesgo" value="Sí" checked /> Sí
+                <input type="radio" name="riesgo" value="No" /> No
+                <input type="text" placeholder="Otros factor riesgo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-regresar" (click) ="goToPaso1()">Regresar</button>
+            <button type="submit" class="btn-continuar" (click)="goToPaso3()">Continuar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
