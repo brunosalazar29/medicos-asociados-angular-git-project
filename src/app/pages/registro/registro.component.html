@@ -1,105 +1,204 @@
+<div class="page-container">
+  <div class="registro-container">
+    <header class="header">
+      <h1>Personal de Salud Afiliado</h1>
+      <img src="img/logo.jpg" alt="Logo" class="logo" />
+    </header>
 
-    <div class="page-container">
-          <div class="registro-container">
-        <header class="header">
-            <h1>Personal de Salud Afiliado</h1>
-            <img src="img/logo.jpg" alt="Logo" class="logo" />
-        </header>
+    <div class="form-body">
+      <p class="form-intro">
+        Ingresa tus datos personales para acceder a tu zona privada. Recuerda
+        que con este registro podrás ingresar tu solicitud en SANNA.
+      </p>
 
-        <div class="form-body">
-            <p class="form-intro">Ingresa tus datos personales para acceder a tu zona privada. Recuerda que con este registro podrás ingresar tu solicitud en SANNA.</p>
-            
-            <form id="registrationForm" novalidate>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="email">Ingrese su Correo</label>
-                        <input type="email" id="email" name="email" placeholder="Correo" required>
-                    </div>
+      <!-- FORMULARIO -->
+      <form (ngSubmit)="registrar()" #form="ngForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="email">Ingrese su Correo</label>
+            <input
+              type="email"
+              id="email"
+              name="correo"
+              placeholder="Correo"
+              required
+              [(ngModel)]="registro.correo"
+            />
+          </div>
 
-                    <div class="form-group">
-                        <label for="email-confirm">Confirmar su Correo</label>
-                        <input type="email" id="email-confirm" name="email-confirm" placeholder="Correo" required>
-                    </div>
+          <div class="form-group">
+            <label for="email-confirm">Confirmar su Correo</label>
+            <input
+              type="email"
+              id="email-confirm"
+              name="confirmCorreo"
+              placeholder="Correo"
+              required
+              [(ngModel)]="registro.confirmCorreo"
+            />
+          </div>
 
-                    <div class="form-group">
-                        <label for="password">Ingrese su Contraseña</label>
-                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    </div>
+          <div class="form-group">
+            <label for="password">Ingrese su Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Contraseña"
+              required
+              [(ngModel)]="registro.password"
+            />
+          </div>
 
-                    <div class="form-group">
-                        <label for="password-confirm">Confirmar su Contraseña</label>
-                        <input type="password" id="password-confirm" name="password-confirm" placeholder="Contraseña" required>
-                    </div>
-                    
-                </div>
-
-                
-                <p class="password-note">LA CONTRASEÑA DEBE TENER COMO MÍNIMO UN NÚMERO, UNA LETRA MINÚSCULA, UNA LETRA MAYÚSCULA Y UN CARACTER ESPECIAL SIN ESPACIOS EN BLANCO.</p>
-
-
-                <h2 class="section-title">Datos personales</h2>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="nombres">Ingrese sus Nombres</label>
-                        <input type="text" id="nombres" name="nombres" placeholder="Nombres" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="apellidos">Ingrese sus Apellidos</label>
-                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefono1">Ingrese su Teléfono 1</label>
-                        <input type="tel" id="telefono1" name="telefono1" placeholder="Teléfono 1" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefono2">Ingrese su Teléfono 2</label>
-                        <input type="tel" id="telefono2" name="telefono2" placeholder="Teléfono 2">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tipo-documento">Ingrese Tipo Documento</label>
-                        <select id="tipo-documento" name="tipo-documento" required>
-                            <option value="">Seleccione...</option>
-                            <option value="DNI">DNI</option>
-                            <option value="CE">Carné de Extranjería</option>
-                            <option value="Pasaporte">Pasaporte</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="nro-documento">Ingrese su Nro Documento</label>
-                        <input type="text" id="nro-documento" name="nro-documento" placeholder="Nro Documento" required>
-                    </div>
-
-                    <div class="checkbox-group full-width">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">He leído y acepto los <a href="#">términos y condiciones</a> y la <a href="#">cláusula informativa</a> para el tratamiento de sus datos personales.</label>
-                    </div>
-
-                    
-                    <div class="checkbox-group full-width">
-                        <input type="checkbox" id="cookies" name="cookies">
-                        <label for="cookies">Acepto el <a href="#">tratamiento de mis datos personales </a>  conforme a los fines adicionales. </label>
-                    </div>
-
-                    <div class="checkbox-group full-width">
-                        <input type="checkbox" id="cookies" name="cookies">
-                        <label for="cookies">He leído y acepto la <a href="#">Política de cookies</a>.</label>
-                    </div>
-
-                    
-                
-                    <div class="form-actions">
-                      <button type="submit" class="btn btn-primary" >Registrar</button>
-                     <button type="button" class="btn btn-secondary" (click)="volverAlLogin()">Cancelar</button>
-
-                    </div>
-                </div>
-            </form>
+          <div class="form-group">
+            <label for="password-confirm">Confirmar su Contraseña</label>
+            <input
+              type="password"
+              id="password-confirm"
+              name="confirmPassword"
+              placeholder="Contraseña"
+              required
+              [(ngModel)]="registro.confirmPassword"
+            />
+          </div>
         </div>
+
+        <p class="password-note">
+          LA CONTRASEÑA DEBE TENER COMO MÍNIMO UN NÚMERO, UNA LETRA MINÚSCULA,
+          UNA LETRA MAYÚSCULA Y UN CARACTER ESPECIAL SIN ESPACIOS EN BLANCO.
+        </p>
+
+        <h2 class="section-title">Datos personales</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nombres">Ingrese sus Nombres</label>
+            <input
+              type="text"
+              id="nombres"
+              name="nombres"
+              placeholder="Nombres"
+              required
+              [(ngModel)]="registro.nombres"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="apellidos">Ingrese sus Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Apellidos"
+              required
+              [(ngModel)]="registro.apellidos"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono1">Ingrese su Teléfono 1</label>
+            <input
+              type="tel"
+              id="telefono1"
+              name="telefono1"
+              placeholder="Teléfono 1"
+              required
+              [(ngModel)]="registro.telefono1"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono2">Ingrese su Teléfono 2</label>
+            <input
+              type="tel"
+              id="telefono2"
+              name="telefono2"
+              placeholder="Teléfono 2"
+              [(ngModel)]="registro.telefono2"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tipo-documento">Ingrese Tipo Documento</label>
+            <select
+              id="tipo-documento"
+              name="tipoDoc"
+              required
+              [(ngModel)]="registro.tipoDoc"
+            >
+              <option value="">Seleccione...</option>
+              <option value="DNI">DNI</option>
+              <option value="CE">Carné de Extranjería</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nro-documento">Ingrese su Nro Documento</label>
+            <input
+              type="text"
+              id="nro-documento"
+              name="nroDoc"
+              placeholder="Nro Documento"
+              required
+              [(ngModel)]="registro.nroDoc"
+            />
+          </div>
+
+          <div class="checkbox-group full-width">
+            <input
+              type="checkbox"
+              id="terms"
+              name="terminos"
+              [(ngModel)]="registro.terminos"
+            />
+            <label for="terms">
+              He leído y acepto los
+              <a href="#">términos y condiciones</a> y la
+              <a href="#">cláusula informativa</a>.
+            </label>
+          </div>
+
+          <div class="checkbox-group full-width">
+            <input
+              type="checkbox"
+              id="datosAdicionales"
+              name="datosAdicionales"
+              [(ngModel)]="registro.datos"
+            />
+            <label for="datosAdicionales">
+              Acepto el <a href="#">tratamiento de mis datos personales</a>
+              conforme a los fines adicionales.
+            </label>
+          </div>
+
+          <div class="checkbox-group full-width">
+            <input
+              type="checkbox"
+              id="cookiePolicy"
+              name="cookiePolicy"
+              [(ngModel)]="registro.cookies"
+            />
+            <label for="cookiePolicy">
+              He leído y acepto la <a href="#">Política de cookies</a>.
+            </label>
+          </div>
+
+
+
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              (click)="volverAlLogin()"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
